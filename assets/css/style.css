@@ -50,12 +50,10 @@ body {
   padding: 1rem 0;
 }
 
-/* Logo */
 .logo img {
   height: 40px;
 }
 
-/* Main nav links */
 .site-nav a {
   margin: 0 1rem;
   text-decoration: none;
@@ -67,7 +65,6 @@ body {
   color: var(--blue);
 }
 
-/* Social icons + CTAs */
 .header-cta {
   display: flex;
   align-items: center;
@@ -92,7 +89,6 @@ body {
   transition: all 0.2s;
 }
 
-/* Outline button */
 .btn-outline {
   border: 2px solid var(--black);
   color: var(--black);
@@ -102,7 +98,6 @@ body {
   color: var(--white);
 }
 
-/* Primary button */
 .btn-primary {
   background: linear-gradient(90deg, #377dff 0%, #ff5a87 100%);
   color: var(--white);
@@ -112,7 +107,7 @@ body {
   opacity: 0.9;
 }
 
-/* Dark‑mode logo swap + header background */
+/* Dark‑mode tweaks for header/nav/buttons */
 @media (prefers-color-scheme: dark) {
   body {
     background: var(--black);
@@ -130,6 +125,44 @@ body {
   .btn-outline:hover {
     background: var(--white);
     color: var(--black);
+  }
+}
+
+/*--------------------------------
+  UNDER CONSTRUCTION BANNER — UPDATED TO STAND OUT
+--------------------------------*/
+.alert-banner {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #ff3b30; /* vivid red */
+  color: #ffffff; /* white text */
+  padding: 1rem 0; /* breathing room */
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700; /* bold text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  z-index: 200; /* above header */
+}
+
+.alert-banner p {
+  margin: 0;
+}
+
+.alert-banner a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.alert-banner a:hover {
+  opacity: 0.8;
+}
+
+/* Dark‑mode tweak for banner */
+@media (prefers-color-scheme: dark) {
+  .alert-banner {
+    background: #ff453a; /* slightly brighter red */
   }
 }
 
@@ -167,14 +200,15 @@ body {
   margin-right: 1rem;
 }
 
-/* Hero illustration */
 .hero-image img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Responsive breakpoints */
+/*--------------------------------
+  Responsive breakpoints
+--------------------------------*/
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
@@ -185,6 +219,6 @@ body {
     margin: 0.5rem 0;
   }
   .site-nav {
-    display: none; /* you can add a hamburger for mobile if desired */
+    display: none; /* hide on mobile, or replace with mobile menu */
   }
 }
