@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wolf Pack Electronics – Console & Peripheral Repair</title>
+
+    <!-- Google Fonts for a tech‑forward feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --accent: #e63946; /* crimson highlight */
+        --dark: #0d0d0d; /* near‑black */
+        --light: #ffffff; /* pure white */
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        background: var(--dark);
+        color: var(--light);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+      header img {
+        width: 200px;
+        height: auto;
+      }
+      h1 {
+        font-family: "Russo One", sans-serif;
+        font-size: 2.5rem;
+        margin-top: 1rem;
+      }
+      .tag {
+        opacity: 0.9;
+        margin: 0.5rem 0 2rem;
+      }
+      .cta {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      .btn-primary {
+        background: var(--accent);
+        color: var(--light);
+      }
+      .btn-outline {
+        background: transparent;
+        color: var(--accent);
+        border: 2px solid var(--accent);
+      }
+      .btn:hover {
+        opacity: 0.8;
+      }
+      main {
+        flex: 1;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      main h2 {
+        font-family: "Russo One", sans-serif;
+        font-size: 1.8rem;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style: square inside;
+        margin-bottom: 2rem;
+      }
+      footer {
+        text-align: center;
+        background: var(--light);
+        color: var(--dark);
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+      footer a {
+        color: inherit;
+        text-decoration: underline;
+      }
+      /* Auto‑swap logos & colors for light‑mode users */
+      @media (prefers-color-scheme: light) {
+        body {
+          background: var(--light);
+          color: var(--dark);
+        }
+        footer {
+          background: var(--dark);
+          color: var(--light);
+        }
+        .btn-primary {
+          background: var(--dark);
+        }
+        .btn-outline {
+          color: var(--dark);
+          border-color: var(--dark);
+        }
+        header img {
+          content: url("assets/images/wolfpack-logo-dark.png");
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- default logo for dark theme -->
+      <img
+        src="assets/images/wolfpack-logo-light.png"
+        alt="Wolfpack Electronics logo"
+      />
+      <h1>Wolfpack Electronics</h1>
+      <p class="tag">
+        Bringing your games back to life — fast, reliable console & controller
+        repairs
+      </p>
+
+      <div class="cta">
+        <a href="mailto:info@wolfpackelectronics.com" class="btn btn-primary"
+          >Email Us</a
+        >
+        <a href="tel:+13214672291" class="btn btn-outline"
+          >Text / Call 321‑467‑2291</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>What We Fix</h2>
+        <ul>
+          <li>
+            PlayStation, Xbox & Nintendo consoles — HDMI ports, power, disc
+            drives
+          </li>
+          <li>Controllers — stick‑drift, broken buttons, charging ports</li>
+          <li>Retro systems & handhelds — Game Boy, Switch, 3DS, PSP, etc.</li>
+          <li>Custom mods — SSD swaps, cooling upgrades, RGB lighting</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Why Choose Us</h2>
+        <ul>
+          <li><strong>Free diagnostics</strong> – quotes in 24 h</li>
+          <li><strong>2‑4 day turnaround</strong> on most jobs</li>
+          <li><strong>90‑day guarantee</strong> on parts & labor</li>
+          <li><strong>No‑fix, no‑fee</strong> promise</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      Questions?
+      <a href="mailto:info@wolfpackelectronics.com"
+        >info@wolfpackelectronics.com</a
+      >
+      &nbsp;•&nbsp; <a href="tel:+13214672291">321‑467‑2291</a><br />
+      © <span id="yr"></span> Wolfpack Electronics
+    </footer>
+
+    <script>
+      document.getElementById("yr").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
