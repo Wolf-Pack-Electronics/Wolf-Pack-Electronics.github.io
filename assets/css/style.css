@@ -221,4 +221,19 @@ body {
   .site-nav {
     display: none; /* hide on mobile, or replace with mobile menu */
   }
+  .social-links a {
+    color: var(--gray);
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+  .social-links a:hover {
+    color: var(--black);
+  }
+
+  /* Add a little space between icon + text in buttons */
+  .btn i {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
 }
