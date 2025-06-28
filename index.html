@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Wolf Pack Electronics • Console &amp; Peripheral Repair</title>
     <meta
       name="description"
@@ -31,21 +32,88 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
-      /* smooth scrolling */
+      /* Smooth scroll for in-page nav */
       html {
         scroll-behavior: smooth;
       }
 
-      /* -------------------- */
-      /* CONNECT WITH US CARDS */
-      /* -------------------- */
+      /* Header CTA layout */
+      .header-cta {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+      }
+      @media (max-width: 640px) {
+        .header-cta {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0.5rem;
+        }
+        .header-cta .btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* HERO */
+      .hero {
+        padding: 4rem 1rem;
+        background: linear-gradient(135deg, #0a0a2a, #15153e);
+        color: #fff;
+      }
+      .hero-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .hero-content {
+        flex: 1 1 300px;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .hero-content p {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .hero-image {
+        flex: 1 1 300px;
+        text-align: center;
+      }
+      .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      /* SECTION CONTAINERS */
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      /* CONNECT WITH US */
       #connect {
         padding: 4rem 1rem;
         background-color: #0f0f12;
-      }
-      #connect .container {
-        max-width: 1000px;
-        margin: 0 auto;
       }
       #connect h2 {
         font-size: 2.25rem;
@@ -53,13 +121,11 @@
         margin-bottom: 2rem;
         text-align: center;
       }
-
       .connect-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 1.5rem;
       }
-
       .connect-card {
         background: #1a1a1f;
         border-radius: 12px;
@@ -75,49 +141,170 @@
         transform: translateY(-6px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
       }
-
       .connect-card i {
         font-size: 2.5rem;
         color: #4dd0e1;
         margin-bottom: 0.75rem;
       }
-
       .connect-card .label {
         font-size: 1.125rem;
         font-weight: 600;
         color: #fff;
         margin-bottom: 0.25rem;
       }
-
       .connect-card .value {
         font-size: 0.95rem;
         color: #bbb;
         word-break: break-word;
       }
-
-      /* Mobile: center cards on very small widths */
       @media (max-width: 480px) {
         .connect-card {
           align-items: center;
           text-align: center;
-        }
-        .connect-card .value {
-          white-space: nowrap;
         }
       }
     </style>
   </head>
 
   <body>
-    <!-- HEADER omitted for brevity… -->
+    <!-- ==== HEADER / NAV ==== -->
+    <header class="site-header">
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <a href="#home" class="logo" aria-label="Homepage">
+          <picture>
+            <source
+              srcset="assets/images/WPE_full_white.png"
+              media="(prefers-color-scheme: dark)"
+            />
+            <img
+              src="assets/images/WPE_full_black.png"
+              alt="Wolf Pack Electronics Logo"
+              style="height: 48px"
+            />
+          </picture>
+        </a>
 
-    <!-- …Hero, About, Products sections… -->
+        <nav class="site-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#products">Products</a>
+          <a href="#connect">Connect</a>
+        </nav>
 
-    <!-- CONNECT WITH US -->
+        <div class="header-cta">
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/wolfpackelectronics/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@wolfpackelectronics"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/wolfpackelectronics/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.twitch.tv/wolfpackelectronics"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitch"
+              ><i class="fab fa-twitch"></i
+            ></a>
+            <a
+              href="https://x.com/wolfpackelectro"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              ><i class="fab fa-x"></i
+            ></a>
+            <a
+              href="https://www.threads.com/@wolfpackelectronics"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Threads"
+              ><i class="fab fa-threads"></i
+            ></a>
+          </div>
+          <a href="mailto:info@wolfpackelectronics.com" class="btn btn-outline"
+            ><i class="fas fa-envelope"></i> Email Us</a
+          >
+          <a href="tel:+13214672291" class="btn btn-primary"
+            ><i class="fas fa-phone-alt"></i> 321-467-2291</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- ==== HERO ==== -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1>Repair Reimagined</h1>
+          <p>
+            Fast, Reliable Console &amp; Peripheral Repairs to Get You Back in
+            the Game
+          </p>
+          <div class="hero-btns">
+            <a href="#connect" class="btn btn-outline">Contact Us</a>
+            <a href="#connect" class="btn btn-primary">Schedule A Repair</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="assets/images/hero-illustration.png"
+            alt="Cyber wolf electronics repair illustration"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== ABOUT ==== -->
+    <section id="about" class="container">
+      <h2>About Wolf Pack Electronics</h2>
+      <p>
+        Wolf Pack Electronics is an appointment-based electronic repair business
+        offering drop-off and mail-in services. We specialize in refurbishing,
+        repairing, modifying, and reselling electronics to keep them out of
+        landfills and in use. Whether you're looking to repair a device or give
+        it new life, we’re here to help. We also live stream many of our repairs
+        on Twitch and YouTube—stop by and watch the process live! Proudly
+        serving our community with transparency, tech expertise, and a passion
+        for sustainability. Join The Pack! 🐺
+      </p>
+    </section>
+
+    <!-- ==== PRODUCTS ==== -->
+    <section id="products" class="container">
+      <h2>Our Products</h2>
+      <p>
+        Coming soon: refurbished consoles, custom mods, replacement parts, and
+        more.
+      </p>
+    </section>
+
+    <!-- ==== CONNECT WITH US ==== -->
     <section id="connect">
       <div class="container">
         <h2>Connect With Us</h2>
-
         <div class="connect-grid">
           <a
             class="connect-card"
@@ -128,7 +315,6 @@
             <div class="label">Call or Text</div>
             <div class="value">+1 (321) 467-2291</div>
           </a>
-
           <a
             class="connect-card"
             href="mailto:info@wolfpackelectronics.com"
@@ -138,7 +324,6 @@
             <div class="label">Email Us</div>
             <div class="value">info@wolfpackelectronics.com</div>
           </a>
-
           <a
             class="connect-card"
             href="https://www.twitch.tv/wolfpackelectronics"
@@ -150,7 +335,6 @@
             <div class="label">Twitch</div>
             <div class="value">@wolfpackelectronics</div>
           </a>
-
           <a
             class="connect-card"
             href="https://www.instagram.com/wolfpackelectronics/"
@@ -162,7 +346,6 @@
             <div class="label">Instagram</div>
             <div class="value">@wolfpackelectronics</div>
           </a>
-
           <a
             class="connect-card"
             href="https://x.com/wolfpackelectro"
@@ -174,7 +357,6 @@
             <div class="label">X</div>
             <div class="value">@wolfpackelectro</div>
           </a>
-
           <a
             class="connect-card"
             href="https://www.threads.com/@wolfpackelectronics"
@@ -186,7 +368,6 @@
             <div class="label">Threads</div>
             <div class="value">@wolfpackelectronics</div>
           </a>
-
           <a
             class="connect-card"
             href="https://www.facebook.com/profile.php?id=61552352498642&m"
@@ -198,7 +379,6 @@
             <div class="label">Facebook</div>
             <div class="value">Wolf Pack Electronics FB Page</div>
           </a>
-
           <a
             class="connect-card"
             href="https://www.linkedin.com/company/wolf-pack-electronics/"
@@ -213,7 +393,5 @@
         </div>
       </div>
     </section>
-
-    <!-- FOOTER omitted… -->
   </body>
 </html>
