@@ -23,10 +23,64 @@
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      /* ===== About Page Overrides ===== */
+      .about-page {
+        padding: 4rem 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .about-page h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .connect-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 3rem;
+      }
+
+      .connect-card {
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.2s, border-color 0.2s;
+      }
+
+      .connect-card:hover {
+        transform: translateY(-4px);
+        border-color: #555;
+      }
+
+      .connect-card i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      .connect-card .label {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      .connect-card .value {
+        font-size: 0.9rem;
+        color: #ccc;
+        word-break: break-all;
+      }
+    </style>
   </head>
 
   <body>
-    <!-- NAVIGATION (same as index.html) -->
+    <!-- NAVIGATION -->
     <header class="site-header">
       <div class="container header-inner">
         <a href="index.html" class="logo">
@@ -53,7 +107,7 @@
     </header>
 
     <!-- ABOUT CONTENT -->
-    <main class="container about-page">
+    <main class="about-page">
       <h1>About Wolf Pack Electronics</h1>
       <p>
         Wolf Pack Electronics is an appointment-based electronic repair business
@@ -65,6 +119,104 @@
         serving our community with transparency, tech expertise, and a passion
         for sustainability. Join The Pack! 🐺
       </p>
+
+      <!-- CONNECT WITH US SECTION -->
+      <section>
+        <h2 style="text-align: center; margin-top: 3rem">Connect With Us</h2>
+        <div class="connect-grid">
+          <a
+            class="connect-card"
+            href="tel:+13214672291"
+            aria-label="Call or Text: +1 (321) 467-2291"
+          >
+            <i class="fas fa-phone-alt"></i>
+            <div class="label">Call or Text</div>
+            <div class="value">+1 (321) 467-2291</div>
+          </a>
+
+          <a
+            class="connect-card"
+            href="mailto:info@wolfpackelectronics.com"
+            aria-label="Email: info@wolfpackelectronics.com"
+          >
+            <i class="fas fa-envelope"></i>
+            <div class="label">Email Us</div>
+            <div class="value">info@wolfpackelectronics.com</div>
+          </a>
+
+          <a
+            class="connect-card"
+            href="https://www.twitch.tv/wolfpackelectronics"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitch: wolfpackelectronics"
+          >
+            <i class="fab fa-twitch"></i>
+            <div class="label">Twitch</div>
+            <div class="value">@wolfpackelectronics</div>
+          </a>
+
+          <a
+            class="connect-card"
+            href="https://www.instagram.com/wolfpackelectronics/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram: wolfpackelectronics"
+          >
+            <i class="fab fa-instagram"></i>
+            <div class="label">Instagram</div>
+            <div class="value">@wolfpackelectronics</div>
+          </a>
+
+          <a
+            class="connect-card"
+            href="https://x.com/wolfpackelectro"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X: wolfpackelectro"
+          >
+            <i class="fab fa-x"></i>
+            <div class="label">X</div>
+            <div class="value">@wolfpackelectro</div>
+          </a>
+
+          <a
+            class="connect-card"
+            href="https://www.threads.com/@wolfpackelectronics"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Threads: wolfpackelectronics"
+          >
+            <i class="fab fa-threads"></i>
+            <div class="label">Threads</div>
+            <div class="value">@wolfpackelectronics</div>
+          </a>
+
+          <a
+            class="connect-card"
+            href="https://www.facebook.com/profile.php?id=61552352498642&m"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook: Wolf Pack Electronics FB Page"
+          >
+            <i class="fab fa-facebook-f"></i>
+            <div class="label">Facebook</div>
+            <div class="value">Wolf Pack Electronics FB Page</div>
+          </a>
+
+          <a
+            class="connect-card"
+            href="https://www.linkedin.com/company/wolf-pack-electronics/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn: Wolf Pack Electronics"
+          >
+            <i class="fab fa-linkedin-in"></i>
+            <div class="label">LinkedIn</div>
+            <div class="value">Wolf Pack Electronics</div>
+          </a>
+        </div>
+      </section>
     </main>
   </body>
 </html>
