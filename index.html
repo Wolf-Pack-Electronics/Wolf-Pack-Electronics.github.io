@@ -7,7 +7,7 @@
     <title>Wolf Pack Electronics • Console &amp; Peripheral Repair</title>
     <meta
       name="description"
-      content="Wolf Pack Electronics—appointment-based console & peripheral repair with drop-off & mail-in services, plus live streams on Twitch & YouTube."
+      content="Wolf Pack Electronics—appointment-based electronics repair with drop-off & mail-in services, plus live streams on Twitch & YouTube."
     />
     <link rel="canonical" href="https://www.wolfpackelectronics.com/" />
 
@@ -31,24 +31,100 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
-      /* smooth scrolling */
+      /* Global smooth scroll */
       html {
         scroll-behavior: smooth;
       }
 
-      /* Connect-with-us grid */
+      /* Header CTA: social + buttons */
+      .header-cta {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+      }
+
+      /* Mobile: stack CTA items */
+      @media (max-width: 640px) {
+        .header-cta {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0.5rem;
+        }
+        .header-cta .btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* Hero tweaks */
+      .hero {
+        padding: 4rem 1rem;
+        background: linear-gradient(135deg, #0a0a2a, #15153e);
+        color: #fff;
+      }
+      .hero-inner {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .hero-content {
+        flex: 1 1 300px;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .hero-content p {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .hero-image {
+        flex: 1 1 300px;
+        text-align: center;
+      }
+      .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      /* Section containers */
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      /* Connect grid */
       .connect-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
         margin-top: 2rem;
+        justify-items: start;
       }
       .connect-card {
         background: #111;
         border: 1px solid #333;
         border-radius: 8px;
         padding: 1.5rem;
-        text-align: center;
+        text-align: left;
         transition: transform 0.2s, border-color 0.2s;
         color: #fff;
         text-decoration: none;
@@ -73,10 +149,18 @@
       }
     </style>
   </head>
+
   <body>
-    <!-- NAVIGATION -->
+    <!-- HEADER & NAV -->
     <header class="site-header">
-      <div class="container header-inner">
+      <div
+        class="container header-inner"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
         <a href="#home" class="logo" aria-label="Homepage">
           <picture>
             <source
@@ -86,15 +170,18 @@
             <img
               src="assets/images/WPE_full_black.png"
               alt="Wolf Pack Electronics Logo"
+              style="height: 48px"
             />
           </picture>
         </a>
+
         <nav class="site-nav">
           <a href="#home">Home</a>
           <a href="#about">About Us</a>
           <a href="#products">Products</a>
-          <a href="#contact">Connect with Us</a>
+          <a href="#contact">Connect</a>
         </nav>
+
         <div class="header-cta">
           <div class="social-links">
             <a
@@ -140,27 +227,19 @@
               ><i class="fab fa-threads"></i
             ></a>
           </div>
-          <a
-            href="mailto:info@wolfpackelectronics.com"
-            class="btn btn-outline"
-            aria-label="Email Us"
-          >
+          <a href="mailto:info@wolfpackelectronics.com" class="btn btn-outline">
             <i class="fas fa-envelope"></i> Email Us
           </a>
-          <a
-            href="tel:+13214672291"
-            class="btn btn-primary"
-            aria-label="Call or text"
-          >
+          <a href="tel:+13214672291" class="btn btn-primary">
             <i class="fas fa-phone-alt"></i> 321-467-2291
           </a>
         </div>
       </div>
     </header>
 
-    <!-- HOME (Hero) -->
+    <!-- HERO -->
     <section id="home" class="hero">
-      <div class="container hero-inner">
+      <div class="hero-inner">
         <div class="hero-content">
           <h1>Repair Reimagined</h1>
           <p>
@@ -175,7 +254,7 @@
         <div class="hero-image">
           <img
             src="assets/images/hero-illustration.png"
-            alt="Electronics Repair"
+            alt="Wolf Electronics Repair"
             loading="lazy"
           />
         </div>
@@ -183,7 +262,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="container about-page">
+    <section id="about" class="container">
       <h2>About Wolf Pack Electronics</h2>
       <p>
         Wolf Pack Electronics is an appointment-based electronic repair business
@@ -197,7 +276,7 @@
       </p>
     </section>
 
-    <!-- PRODUCTS (placeholder) -->
+    <!-- PRODUCTS -->
     <section id="products" class="container">
       <h2>Our Products</h2>
       <p>
@@ -206,11 +285,9 @@
       </p>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONNECT -->
     <section id="contact" class="container">
-      <h2 style="text-align: left; margin-top: 3rem">
-        Connect With Us- Join the Pack!
-      </h2>
+      <h2>Connect With Us</h2>
       <div class="connect-grid">
         <a
           class="connect-card"
@@ -279,7 +356,7 @@
           href="https://www.facebook.com/profile.php?id=61552352498642&m"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Facebook: Wolf Pack Electronics FB"
+          aria-label="Facebook: Wolf Pack Electronics FB Page"
         >
           <i class="fab fa-facebook-f"></i>
           <div class="label">Facebook</div>
