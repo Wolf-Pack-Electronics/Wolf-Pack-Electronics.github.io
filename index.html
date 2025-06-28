@@ -1,9 +1,21 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wolf Pack Electronics • Console & Peripheral Repair</title>
+    <meta
+      name="description"
+      content="Wolf Pack Electronics — Fast, reliable console & peripheral repair. Proudly serving gamers nationwide."
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <title>Wolf Pack Electronics • Console &amp; Peripheral Repair</title>
+    <link
+      rel="canonical"
+      href="https://www.wolfpackelectronics.com/index.html"
+    />
 
     <!-- Favicon -->
     <link
@@ -16,7 +28,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-REPLACE_WITH_FULL_SRI_HASH_FROM_CDN"
+      integrity="sha512-pO/StT/xpZQb4lJBXvJ3CLjp9g6QjkxLOIuZNVmD+fKBg2+/rV6wQbcgk3Xb9XClKDQ/R9dZ8jluS4I/sSgb3g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -24,12 +36,14 @@
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-
   <body>
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- NAVIGATION -->
-    <header class="site-header">
+    <header class="site-header" role="banner">
       <div class="container header-inner">
-        <a href="index.html" class="logo">
+        <a href="index.html" class="logo" aria-label="Homepage">
           <picture>
             <source
               srcset="assets/images/WPE_full_white.png"
@@ -42,122 +56,143 @@
           </picture>
         </a>
 
-        <nav class="site-nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="products.html">Products</a>
-          <a href="resources.html">Resources</a>
-          <a href="contact.html">Contact Us</a>
+        <nav class="site-nav" role="navigation" aria-label="Main menu">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
         </nav>
 
         <div class="header-cta">
-          <!-- Social icons with proper links -->
-          <div class="social-links">
+          <!-- Social icons -->
+          <div class="social-links" aria-label="Social links">
             <a
               href="https://www.instagram.com/wolfpackelectronics/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
             <a
               href="https://www.youtube.com/@wolfpackelectronics"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              ><i class="fab fa-youtube"></i
-            ></a>
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
             <a
               href="https://www.facebook.com/wolfpackelectronics/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
             <a
               href="https://www.twitch.tv/wolfpackelectronics"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitch"
-              ><i class="fab fa-twitch"></i
-            ></a>
+            >
+              <i class="fab fa-twitch"></i>
+            </a>
             <a
               href="https://www.ebay.com/usr/wolfpackelectronics"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="eBay"
-              ><i class="fab fa-ebay"></i
-            ></a>
+            >
+              <i class="fab fa-ebay"></i>
+            </a>
             <a
               href="https://www.linkedin.com/company/wolf-pack-electronics/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
             <a
               href="https://x.com/wolfpackelectro"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X"
-              ><i class="fab fa-x"></i
-            ></a>
+            >
+              <i class="fab fa-x"></i>
+            </a>
             <a
               href="https://www.threads.com/@wolfpackelectronics"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Threads"
-              ><i class="fab fa-threads"></i
-            ></a>
+            >
+              <i class="fab fa-threads"></i>
+            </a>
           </div>
 
-          <!-- Email + Call/Text buttons with icons -->
-          <a href="mailto:info@wolfpackelectronics.com" class="btn btn-outline">
+          <!-- Email + Call/Text buttons -->
+          <a
+            href="mailto:info@wolfpackelectronics.com"
+            class="btn btn-outline"
+            aria-label="Email us"
+          >
             <i class="fas fa-envelope"></i> Email Us
           </a>
-          <a href="tel:+13214672291" class="btn btn-primary">
-            <i class="fas fa-phone-alt"></i> Call/Text 321‑467‑2291
+          <a
+            href="tel:+13214672291"
+            class="btn btn-primary"
+            aria-label="Call or text us"
+          >
+            <i class="fas fa-phone-alt"></i> Call/Text 321-467-2291
           </a>
         </div>
       </div>
     </header>
 
     <!-- UNDER CONSTRUCTION BANNER -->
-    <section class="alert-banner">
+    <section class="alert-banner" role="region" aria-live="polite">
       <div class="container">
         <p>
           🚧 <strong>Site Under Construction.</strong>
           For any repair requests or questions, please
           <a href="mailto:info@wolfpackelectronics.com">email us</a>
           or
-          <a href="tel:+13214672291">call/text 321‑467‑2291</a>.
+          <a href="tel:+13214672291">call/text 321-467-2291</a>.
         </p>
       </div>
     </section>
 
     <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1>Repair Reimagined</h1>
-          <p>
-            Fast, Reliable Console & Peripheral Repairs to Get You Back in the
-            Game
-          </p>
-          <div class="hero-btns">
-            <a href="contact.html" class="btn btn-outline">Contact Us</a>
-            <a href="#schedule" class="btn btn-primary">Schedule A Repair</a>
+    <main id="main-content">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <h1>Repair Reimagined</h1>
+            <p>
+              Fast, Reliable Console &amp; Peripheral Repairs to Get You Back in
+              the Game
+            </p>
+            <div class="hero-btns">
+              <a href="contact.html" class="btn btn-outline">Contact Us</a>
+              <a href="#schedule" class="btn btn-primary">Schedule A Repair</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="assets/images/hero-illustration.png"
+              alt="Electronics Repair Illustration"
+              loading="lazy"
+            />
           </div>
         </div>
-        <div class="hero-image">
-          <img
-            src="assets/images/hero-illustration.png"
-            alt="Electronics Repair"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Additional content sections can go here… -->
+      <!-- Additional content sections… -->
+    </main>
   </body>
 </html>
