@@ -3,19 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Learn more about Wolf Pack Electronics — who we are, what we do, and how we got started. Plus: our Twitch channel About section."
-    />
-    <meta name="theme-color" content="#0a0a0a" />
-
     <title>About Us • Wolf Pack Electronics</title>
-    <link
-      rel="canonical"
-      href="https://www.wolfpackelectronics.com/about.html"
-    />
 
     <!-- Favicon -->
     <link
@@ -28,7 +17,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-pO/StT/xpZQb4lJBXvJ3CLjp9g6QjkxLOIuZNVmD+fKBg2+/rV6wQbcgk3Xb9XClKDQ/R9dZ8jluS4I/sSgb3g=="
+      integrity="sha512-REPLACE_WITH_FULL_SRI_HASH_FROM_CDN"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -36,12 +25,12 @@
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
-    <a class="skip-link" href="#about-main">Skip to content</a>
 
-    <header class="site-header" role="banner">
+  <body>
+    <!-- NAVIGATION (same as index) -->
+    <header class="site-header">
       <div class="container header-inner">
-        <a href="index.html" class="logo" aria-label="Homepage">
+        <a href="index.html" class="logo">
           <picture>
             <source
               srcset="assets/images/WPE_full_white.png"
@@ -54,19 +43,32 @@
           </picture>
         </a>
 
-        <nav class="site-nav" role="navigation" aria-label="Main menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" aria-current="page">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About Us</a>
+          <a href="products.html">Products</a>
+          <a href="resources.html">Resources</a>
+          <a href="contact.html">Contact Us</a>
         </nav>
+
+        <div class="header-cta">
+          <div class="social-links">
+            <!-- same social links… -->
+            <a
+              href="https://www.twitch.tv/wolfpackelectronics"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitch"
+              ><i class="fab fa-twitch"></i
+            ></a>
+            <!-- etc. -->
+          </div>
+        </div>
       </div>
     </header>
 
-    <main id="about-main" class="about-page container">
+    <!-- ABOUT CONTENT -->
+    <main class="container about-page">
       <section class="company-overview">
         <h1>About Wolf Pack Electronics</h1>
         <p>
@@ -75,14 +77,14 @@
           and peripheral repairs. Our mission is simple: get you back in the
           game, hassle-free.
         </p>
-        <!-- more company history, values, team bios… -->
+        <!-- you can expand with history, team, values… -->
       </section>
 
       <section class="twitch-about">
-        <h2>Meet Us on Twitch</h2>
+        <h2>Our Twitch Channel</h2>
         <p>
-          Catch our behind-the-scenes repair streams, tech tips, and community
-          chats on Twitch. Here’s our official “About” section:
+          Tune in for live repair streams, behind-the-scenes content, and Q&A
+          sessions. Here’s our official “About” embed:
         </p>
         <div
           class="twitch-embed-wrapper"
@@ -90,24 +92,23 @@
         >
           <iframe
             src="https://www.twitch.tv/embed/wolfpackelectronics/about"
-            height="100%"
-            width="100%"
             frameborder="0"
             scrolling="no"
-            allowfullscreen="true"
+            height="100%"
+            width="100%"
+            allowfullscreen
             title="Wolf Pack Electronics Twitch About"
             style="position: absolute; top: 0; left: 0"
           ></iframe>
         </div>
         <p class="twitch-link">
-          Or visit directly at
+          Or visit directly:
           <a
             href="https://www.twitch.tv/wolfpackelectronics/about"
             target="_blank"
             rel="noopener noreferrer"
+            >twitch.tv/wolfpackelectronics/about</a
           >
-            twitch.tv/wolfpackelectronics/about </a
-          >.
         </p>
       </section>
     </main>
